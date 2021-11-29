@@ -1,0 +1,137 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+input, textarea, select {
+  font: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+body {
+  font-family:  sans-serif;
+  color: #000;
+  background-color: #fff;
+  user-select: none;
+}
+
+#nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
+  padding: 1em;
+  z-index: 99;
+  /*color: rgb(255, 255, 255);*/
+  /*background: rgb(0,100,0);*/
+}
+
+.controls button {
+  display: inline-block;
+  margin-right: 1em;
+  padding: 1em 2em;
+  border-radius: 2em;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 2em #0f0;
+  transition: all .2s ease-in;
+}
+
+.controls button:hover,
+.controls button:active {
+  background: #0f0;
+  color: #fff;
+}
+
+.controls button:last-child {
+  margin-right: 0;
+}
+
+/* MAIN ORIENTATION */
+
+main {
+  /*position: relative;*/
+  display: flex;
+}
+
+.sketch {
+  position: relative;
+  width: 100vmin;
+  height: 100vmin;
+  flex-basis: 100vmin;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+#sketch1 {
+  /*background: #ff0;*/
+}
+#sketch2 {
+  /*background: #00f;*/
+}
+#sketch3 {
+  /*background: #0ff;*/
+}
+#sketch4 {
+  /*background: #f00;*/
+}
+
+@media (orientation: landscape) {
+  main {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  main {
+    flex-direction: column;
+  }
+}
+
+/* SVG STUFF */
+stage,
+svg,
+path {
+  /*position: absolute;*/
+  overflow: visible;
+}
